@@ -1,6 +1,5 @@
- // Export a function named 'getDate' from the module
-module.exports.getDate = function getDate() {
-    // Get the current date and time in the timezone "Australia/Brisbane"
-    let aestTime = new Date().toLocaleString("en-US", {timeZone: "Australia/Brisbane"});
-    return aestTime; // Return the formatted date and time
+module.exports.getDate = function getDate() {                                                 // Export a function named 'getDate' from the module
+    let aestString = new Date().toLocaleString("en-US", { timeZone: "America/Phoenix" });     // Get the current date and time string in the timezone
+    let aestDate = new Date(aestString);                                                      // Convert that string back into a Date object
+    return aestDate; 
 };
